@@ -17,8 +17,7 @@ public class TicTacToeAF {
 	public static final String THANK_YOU = "Thank you for playing!";
 	public static final char PLAYER1SIGN = 'x';
 	public static final char PLAYER2SIGN = 'o';
-	public static final String PLAYER1_STR = "Player 1";
-	public static final String PLAYER2_STR = "Player 2";
+	public static final String PLAYER_STR = "Player ";
 	public static Map<Character, String> signToPlayerStr;
 	public static Map<String, Character> playerStrToSign;
 	
@@ -44,12 +43,15 @@ public class TicTacToeAF {
 
 			Board board = new Board();
 			boolean turn = true;
+			System.out.println("Instructions: ");
+			System.out.println("To place a move, enter <row> <column>");
+			System.out.println("e.g. '0 0' is the top left corner, '1 1' is the middle, '2 2' is the bottom right corner.");
 			board.printNBoard();
 			
 			while(true){
 				if(board.canMove()){
 					Player currentPlayer = turn ? player1 : player2;
-					String currentPlayerStr = turn ? PLAYER1_STR : PLAYER2_STR;
+					String currentPlayerStr = PLAYER_STR + (turn ? 1 : 2);
 					System.out.println("It is " + currentPlayerStr + "'s turn.");
 					if (!currentPlayer.move(board)){
 						System.out.println("Invalid move. Please try again");
@@ -79,13 +81,13 @@ public class TicTacToeAF {
 	
 	private static Player getPlayerFromInput(BufferedReader br, int playerId) throws IOException{
 		Player player = null;
-		char playerSign = playerStrToSign.get("Player " + playerId);
-		System.out.println("Will Player " + playerId + " ("+ playerSign +"'s) be human or computer?");
+		char playerSign = playerStrToSign.get(PLAYER_STR + playerId);
+		System.out.println("Will " + PLAYER_STR + playerId + " ("+ playerSign +"'s) be human or computer?");
 		String playerHorC = br.readLine().toLowerCase();
 		player = PlayerFactory.generate(playerHorC);
 		while (player == null){
 			System.out.println("Please either type HUMAN or COMPUTER (case-insensitive).");
-			System.out.println("Will Player " + playerId + " ("+ playerSign +"'s) be human or computer?");
+			System.out.println("Will " + PLAYER_STR + playerId + " ("+ playerSign +"'s) be human or computer?");
 			playerHorC = br.readLine().toLowerCase();
 			player = PlayerFactory.generate(playerHorC);
 		}
@@ -95,10 +97,10 @@ public class TicTacToeAF {
 	private static void initPlayerSignMap(){
 		signToPlayerStr = new HashMap<>();
 		playerStrToSign = new HashMap<>();
-		signToPlayerStr.put(PLAYER1SIGN, PLAYER1_STR);
-		signToPlayerStr.put(PLAYER2SIGN, PLAYER2_STR);
-		playerStrToSign.put(PLAYER1_STR, PLAYER1SIGN);
-		playerStrToSign.put(PLAYER2_STR, PLAYER2SIGN);
+		signToPlayerStr.put(PLAYER1SIGN, PLAYER_STR + 1);
+		signToPlayerStr.put(PLAYER2SIGN, PLAYER_STR + 2);
+		playerStrToSign.put(PLAYER_STR + 1, PLAYER1SIGN);
+		playerStrToSign.put(PLAYER_STR + 2, PLAYER2SIGN);
 	}
 		
 
