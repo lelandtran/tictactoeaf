@@ -13,12 +13,13 @@ Humans will be asked to enter a move. Choose a box by denoting a row and column 
 i.e. enter '<row> <column>' when prompted for a move.  
 Computers will automatically choose a move.  
 
-| Row | Col  | Map |
+###Row Column Map###
+| Tic | Tac | Toe |
 | --- |:---:| ---:|
 | 0 0 | 0 1 | 0 2 |
 | 1 0 | 1 1 | 1 2 |
 | 2 0 | 2 1 | 2 2 |
 
-
+##Extra stuff##
 For added fun, you can edit the BOARD_SIZE static member constant to play tic tac toe on an NxN board.  
 Class diagram included in the misc directory.  
