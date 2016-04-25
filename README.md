@@ -3,6 +3,8 @@
 ##Setup##
 Using bash, compile and run the code with the command './compileAndRun.sh'.
 Otherwise, copy and paste both lines in the compileAndRun.sh file to the command line.
+These commands will compile the .java files under src/tictactoe
+and place the .class files in a directory called bin.
 
 ##Gameplay##
 You will be asked to specify whether players 1 and 2 are humans or computers.
