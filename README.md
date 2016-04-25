@@ -1,5 +1,5 @@
 #TicTacToeAF#
-
+AF for AppFolio :)
 ##Setup##
 Using bash, compile and run the code with the command ```./compileAndRun.sh```.  
 Otherwise, copy and paste both lines in the ```compileAndRun.sh``` file to the command line.  
