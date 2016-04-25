@@ -1,7 +1,7 @@
 #TicTacToeAF#
 
 ##Setup##
-Using bash, compile and run the code with the command ```./compileAndRun.sh'```.  
+Using bash, compile and run the code with the command ```./compileAndRun.sh```.  
 Otherwise, copy and paste both lines in the ```compileAndRun.sh``` file to the command line.  
 These commands will compile the ```.java``` files under the ```src/tictactoe``` directory and place the ```.class``` files in a directory called ```bin```.  
 
