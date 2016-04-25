@@ -12,18 +12,13 @@ Player 1 will be x's and Player 2 will be o's.
 Humans will be asked to enter a move. Choose a box by denoting a row and column number,  
 i.e. enter '<row> <column>' when prompted for a move.  
 Computers will automatically choose a move.  
-Row Column Map:  
-      |       |  
-'0 0' | '0 1' | '0 2'  
-      |       |  
----------------------  
-      |       |  
-'1 0' | '1 1' | '1 2'  
-      |       |  
----------------------   
-      |       |  
-'2 0' | '2 1' | '2 2'  
-      |       |         
+
+| Row | Col  | Map |
+| --- |:---:| ---:|
+| 0 0 | 0 1 | 0 2 |
+| 1 0 | 1 1 | 1 2 |
+| 2 0 | 2 1 | 2 2 |
+
 
 For added fun, you can edit the BOARD_SIZE static member constant to play tic tac toe on an NxN board.  
 Class diagram included in the misc directory.  
